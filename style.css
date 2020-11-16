@@ -10,10 +10,6 @@ body {
   justify-content: center;
 }
 
-body.secondary {
-  background-color: #ff9e0d;
-}
-
 .container {
   width: 750px;
   max-width: 75%;
@@ -40,7 +36,8 @@ body.secondary {
 }
 
 .button:active {
-  transform: scale(1.15);
-  transition-duration: 0.5s;
+  border: 6px solid #ffcc22;
+  transform: scale(1.05);
+  transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
 }
