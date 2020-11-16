@@ -1,14 +1,17 @@
-const clapButton = document.getElementById("button-clap");
-let isClicked = false;
+const clapButton = document.getElementById('clap-button');
 
-clapButton.addEventListener("click", switchBackground);
+clapButton.addEventListener('click', switchBackground);
 
 function switchBackground() {
-  if (isClicked == false) {
-    document.body.classList.add("secondary");
-    isClicked = true;
-  } else if (isClicked == true) {
-    document.body.classList.remove("secondary");
-    isClicked = false;
-  }
+  const backgroundColor = randomColor();
+  document.body.style.backgroundColor = backgroundColor;
+}
+
+function randomColor() {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+
+  const color = 'rgb(' + red + ',' + green + ',' + blue + ')';
+  return color;
 }
